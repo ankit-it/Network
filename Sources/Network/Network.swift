@@ -1,6 +1,6 @@
 import Foundation
 
-enum ErrorType: Int {
+public enum ErrorType: Int {
     case unknown
     case decoding
     case invalidURL
@@ -14,7 +14,7 @@ enum ErrorType: Int {
     }
 }
 
-protocol Network {
+public protocol Network {
 
     associatedtype ResponseModel: Codable
 
@@ -36,7 +36,7 @@ protocol Network {
     )
 }
 
-extension Network {
+public extension Network {
     func fetchData(
         for request: URLRequest,
         completion: @escaping (Result<ResponseModel, Error>) -> Void

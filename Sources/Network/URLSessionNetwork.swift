@@ -12,7 +12,7 @@ public class URLSessionNetwork<Model: Codable>: Network {
 
     public let session: URLSession
 
-    init(session: URLSession = URLSession(configuration: .default)) {
+    public init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
     }
 
